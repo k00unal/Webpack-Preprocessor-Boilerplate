@@ -3,7 +3,7 @@ var webpack = require("webpack");
 var fs = require("fs");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require("autoprefixer");
 
@@ -122,7 +122,7 @@ var config = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new CleanWebpackPlugin([dist]),
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       path: dist,
       filename: "css/[name].css"
